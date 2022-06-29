@@ -1,0 +1,4 @@
+gopkg.in/check.v1 v1.0.0-20161208181325-20d25e280405 h1:829vOVxxusYHC+IqBtkX5mbKtsY9fheQiQn0MZRVLfQ=
+gopkg.in/check.v1 v1.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/olebedev/go-duktape.v3 v3.0.0-20171029042843-391c1c40178e h1:Dkdz0fT87mtOV7u9SEgUoQp1AAwDS+OFk3S1lusCpcQ=
+gopkg.in/olebedev/go-duktape.v3 v3.0.0-20171029042843-391c1c40178e/go.mod h1:uAJfkITjFhyEEuUfm7bsmCZRbW5WRq8s9EY8HZ6hCns=

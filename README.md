@@ -147,6 +147,11 @@ type = struct tfsxml_string {
 
 https://github.com/MediaArea/MediaInfoLib/commit/2ea23833d3eb0333c73fdf3e372c27a3384b342c
 
+
+```hexdump
+00000000: 8e3c 2101                                .<!.
+```
+
 ----
 
 https://wimlib.net/downloads/wimlib-1.13.5.tar.gz
@@ -162,3 +167,11 @@ apt install wget libxml2-dev ntfs-3g-dev libfuse-dev libattr1-dev
 ```
 honggfuzz -i in -z -- /usr/local/bin/wimlib-imagex verify ___FILE___
 ```
+
+----
+
+`CC=/honggfuzz/hfuzz_cc/hfuzz-clang CXX=/honggfuzz/hfuzz_cc/hfuzz-clang++ make`
+
+mdn -o /dev/null -f test.md
+
+honggfuzz -i in -z -- /usr/local/bin/mdn -o /dev/null -f ___FILE___
