@@ -6,10 +6,6 @@ RUN apt-get -y update && apt-get install -y \
     gcc \
     git \
     make \
-    pkg-config \
-	libipt-dev \
-	libunwind8-dev \
-	binutils-dev \
     wget \
     libdb-dev \
     libgmp-dev \
@@ -17,12 +13,14 @@ RUN apt-get -y update && apt-get install -y \
 
 RUN git clone --depth=1 https://github.com/xen0bit/bggp3.git
 
-WORKDIR /bggp3/gnucobol
+WORKDIR /bggp3/gnucobol/gnucobol-3.1.2
 
-RUN ./configure \
-    make -j$(nproc) \
-    make install \
-    ldconfig \
-    cobc -V \
-    cobc crash.on.the.cob
+RUN ./configure
+RUN make -j$(nproc)
+RUN make install
+RUN ldconfig
 
+WORKDIR /bggp3/gnucobol/
+
+RUN cobc -V
+RUN cobc crash.on.the.cob
